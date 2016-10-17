@@ -136,7 +136,7 @@
 			position:			absolute;
 			width:				100%;
 			height:				100%;
-			background-image:	url("http://kurld.com/images/wallpapers/adventure-time-wallpaper/adventure-time-wallpaper-16.jpg");
+			background-image:	url("http://cdn.wallpapersafari.com/7/42/O69pDy.jpg");
 			background-repeat:	no-repeat;
 			background-position:center center;
 			background-size:	cover;
@@ -237,7 +237,32 @@
 			box-shadow: 		10px 0 0 #00592D, -10px 0 0 #00592D;
 		}
 		
+		.porfimg2:hover
+		{
+			height: 40%;
+			width: 27%;
+		}
+		
+		.porfimg2:hover
+		{
+			height: 35%;
+			width: 27%;
+			left: 10%;
+		}
+		
+		#Magic{
+			color: white;
+			background-color: green;
+			border: solid 2px gray;
+			border-radius: 10px;
+		}
 
+		#Scruff{
+			color: white;
+			background-color: green;
+			border: solid 2px gray;
+			border-radius: 10px;
+		}
 	</style>
 	<body>
 		<div id="backbox">
@@ -261,8 +286,9 @@
 		<div id="porf1">
 			<h2 class="job">Starbucks</h2>
 		</div>
-		<img src="http://i.imgur.com/AjvCPUi.gif" class = "porfimg"/>
-		
+		<a href="http://www.starbucks.ca/">
+			<img src="http://i.imgur.com/AjvCPUi.gif" class = "porfimg"/>
+		</a>
 		<div id="porf2">
 			<h2 class="job">Pharmacy</h2>
 		</div>
@@ -271,26 +297,49 @@
 		<div id="porf3">
 			<h2 class="job">McDonalds</h2>
 		</div>
-		<img src="http://files.shandymedia.com/styles/page/s3/images/photos/thesavory/japanese-mcdonalds-anime-2.gif" class = "porfimg3"/>
-		
+		<a href="http://www.mcdonalds.ca/ca/en.html">
+			<img src="http://files.shandymedia.com/styles/page/s3/images/photos/thesavory/japanese-mcdonalds-anime-2.gif" class = "porfimg3"/>
+		</a>
 		<div id="porf4">
 			<h2 class="job">Server</h2>
+			<button id = "Magic">Magic</button>
 		</div>
-		<img src="http://66.media.tumblr.com/27fbb5d8422f96e7287fccec72fafd4b/tumblr_inline_nq6dhp7DVM1slrvm0_500.gif" class = "porfimg4"/>
+		<img src="http://66.media.tumblr.com/27fbb5d8422f96e7287fccec72fafd4b/tumblr_inline_nq6dhp7DVM1slrvm0_500.gif" class = "porfimg4" id="server"/>
 		
 		<div id="porf5">
 			<h2 class="job">Janitor</h2>
+			<button id = "Scruff">Scruff</button>
 		</div>
-		<img src="http://i.imgur.com/hZhYS7X.gif" class = "porfimg5"/>
+		<img src="http://i.imgur.com/hZhYS7X.gif" class = "porfimg5" id="janitor"/>
 		
 		<div id="Bio">
 			<h1 class="biotitle">Bio</h1>
 			<p class="biobody">I don't have very many interests, but I do enjoy programming which is why I took CIT as a course. I like to play video games and watch shows to pass the time. The words I like to live by are "Dude, sucking at something is the first step to being sorta good at something." - Jake the Dog. I hope I can get along with all of you. I have had a few jobs before but all of them were part time. I know a few programming languages already but I've forgotten the syntax over the time. Honestly I'm just writing to make this thing seem longer than it actually is because I'm not very good about writing about myself.</p>
 		</div>
-		<img src="http://i.imgur.com/I8CWhD3.jpg" class = "biopic"/>
-		
+		<a href="https://www.facebook.com/CowboiTanaka">
+			<img src="http://i.imgur.com/I8CWhD3.jpg" class = "biopic"/>
+		</a>
 		<div id="End">
 			<i><h3 class="endquote">"When bad things happen, I know you want to believe they are a joke, but sometimes life is scary and dark. That is why we must find the light."</h3></i>
 		</div>
+		
+		<script>
+			var magicify = document.getElementById("Magic");
+			var serverimg = document.getElementById("server");
+			var scruffy = document.getElementById("Scruff");
+			var janitorimg = document.getElementById("janitor")
+			
+			var my_width 	= 250;
+			
+			magicify.onclick = function(){
+				serverimg.src = "https://media.giphy.com/media/VrTYU0x9KbTuU/giphy.gif";
+			}
+			
+			scruffy.onclick = function(){
+				janitorimg.src = "http://24.media.tumblr.com/187c1cde14c57e487fc39bef5fb2f8a0/tumblr_n15qm36NfG1r8q9x8o1_500.gif";
+				janitorimg.style.width = my_width + "px";
+				my_width = my_width + 50;
+			}
+		</script>
 	</body>
 </html>
